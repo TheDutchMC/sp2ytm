@@ -1,0 +1,38 @@
+[package]
+name = "sp2ytm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "2.33.3"
+sha2 = "0.9.8"
+base64 = "0.13.0"
+actix-web = "3.3.2"
+actix-server = "1"
+anyhow = "1.0.48"
+rand = "0.8.4"
+log = "0.4.14"
+env_logger = "0.9.0"
+serde_qs = "0.8.5"
+lazy_static = "1.4.0"
+regex = "1.5.4"
+serde_json = "1.0.72"
+snailquote = "0.3.1"
+ratelimit_meter = "5.0.0"
+nonzero_ext = "0.3.0"
+
+[dependencies.reqwest]
+version = "0.11.6"
+default-features = false
+features = ["json", "rustls-tls", "blocking"]
+
+[dependencies.tokio]
+version = "1.14.0"
+default-features = false
+features = ["rt", "rt-multi-thread"]
+
+[dependencies.serde]
+version = "1.0.130"
+features = ["derive"]
